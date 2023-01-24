@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Poster</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body class="min-h-screen overflow-hidden ">
+    <h1 class="absolute top-16 text-5xl overflow-hidden font-bold tracking-tighter md:text-6xl md:overflow-visible">
+        <span class="block text-2xl tracking-normal">The</span>
+        WALKING
+        DEAD
+    </h1>
+    <div id="poster" class="relative w-full flex flex-col overflow-hidden md:max-w-5xl md:flex-row md:max-h-40">
+        <span id="close-btn"
+            class="absolute right-4 top-2 text-[#c7c7c7] z-10 transition-all hover:cursor-pointer hover:scale-125">&#x2715;</span>
+        <div id="zombie-img" class="overflow-hidden w-7/12 max-h-[10rem] md:w-1/3 md:max-h-full">
+            <img class="" src="/assets/zombie-single.png" alt="">
+        </div>
+        <div id="commercial"
+            class="flex flex-col gap-y-4 justify-center items-center py-8 md:h-auto md:shadow-none md:w-1/3">
+            <h2 class="text-white text-center text-lg">NEW SEASON COMING SOON</h2>
+            <button id="netflix-btn" class="text-[#d9232e] border border-[#d9232e] p-2 px-6">Watch on
+                <span class="font-bold">NETFLIX</span></button>
+        </div>
+        <div id="rick-img" class="overflow-hidden w-7/12 max-h-[10rem] self-end md:w-1/3 md:self-start md:h-auto">
+            <img src="/assets/rick.png" alt="">
+        </div>
+    </div>
+    <img id="zombie-hands" class="absolute -bottom-[9rem] w-[27rem] md:-bottom-[14rem] md:w-[36rem] h-auto object-cover"
+        src="/assets/zombie-hands Background Removed.png" alt="">
+</body>
+
+</html>

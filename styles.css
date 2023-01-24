@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Special+Elite&display=swap');
+
+body {
+  background-image: url('https://flxt.tmsimg.com/assets/p20172644_i_h8_ad.jpg');
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+h1 {
+  color: white;
+  padding: 0.25em 1em;
+  border-radius: 0.15em;
+  opacity: 0;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.25em currentColor;
+  position: relative;
+}
+
+h1::before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  background: currentColor;
+  top: 75%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1.3em) rotateX(45deg) scale(1.1, 0.6);
+  filter: blur(0.5em);
+}
+
+#poster {
+  background-image: url('');
+  background-position: bottom;
+  background-size: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#zombie-img,
+#rick-img {
+  filter: grayscale(80%);
+  opacity: 0.9;
+}
+
+#netflix-btn {
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+#netflix-btn:hover {
+  text-shadow: 0 0 0.13em hsl(0 0% 100% / 0.1), 0 0 0.28em currentColor;
+  box-shadow: 0 0 0.45em hsl(356, 72%, 49%) inset,
+    0 0 0.9em 0.25em hsl(356, 72%, 49%);
+  transform: scale(1.1);
+}
+
+#zombie-hands {
+  filter: brightness(10%);
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  #commercial {
+    box-shadow: 0 -1.3em 1.25em hsl(0, 0%, 7%), 0 1.3em 1.25em hsl(0, 0%, 7%);
+  }
+}
+
+/* Custom Class */
+.neon {
+  animation: 2s linear 2s infinite alternate neon;
+}
+
+/* KEYFRAMES */
+
+@keyframes neon {
+  0% {
+    opacity: 1;
+  }
+  2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  24% {
+    opacity: 0.1;
+  }
+  26% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+
+@keyframes delay {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
